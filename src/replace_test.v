@@ -16,11 +16,19 @@ fn testsuite_end() {
 }
 
 fn test_replace_empty() {
-	assert re.replace('', 'c', 0)! == ''
+	re.replace('', 'c', 0) or {
+		assert err is NoMatch
+		return
+	}
+	assert false
 }
 
 fn test_replace_no() {
-	assert re.replace('b', 'c', 0)! == 'b'
+	re.replace('b', 'c', 0) or {
+		assert err is NoMatch
+		return
+	}
+	assert false
 }
 
 fn test_replace_yes() {
@@ -44,11 +52,19 @@ fn test_replace_between() {
 }
 
 fn test_replace_first_empty() {
-	assert re.replace_first('', 'c', 0)! == ''
+	re.replace_first('', 'c', 0) or {
+		assert err is NoMatch
+		return
+	}
+	assert false
 }
 
 fn test_replace_first_no() {
-	assert re.replace_first('b', 'c', 0)! == 'b'
+	re.replace_first('b', 'c', 0) or {
+		assert err is NoMatch
+		return
+	}
+	assert false
 }
 
 fn test_replace_first_yes() {

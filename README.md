@@ -187,7 +187,6 @@ The following types, constants, functions and methods are exported:
     (r &RegEx) replace(s string, with string, opt int) !string
     (r &RegEx) replace_first(s string, with string, opt int) !string
 
-
     (m &Match) group_bounds(idx int) ?(int, int)
     (m &Match) group_text(subject string, idx int) ?string
 

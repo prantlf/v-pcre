@@ -9,17 +9,24 @@ pub fn (r &RegEx) replace(s string, with string, opt int) !string {
 	exec_opt := opt & ~pcre.opt_replace_groups
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
-	mut builder := new_builder(s.len + with.len)
+	mut builder := unsafe { &Builder(nil) }
 	mut pos := 0
 	mut last := 0
 	stop := s.len
 	for {
 		code := C.pcre_exec(r.re, r.extra, s.str, stop, pos, exec_opt, offsets.data, offsetcount)
 		if code == C.PCRE_ERROR_NOMATCH {
+			if pos == 0 {
+				return NoMatch{}
+			}
 			break
 		} else if code <= 0 {
 			return fail_exec(code)
 		} else {
+			if isnil(builder) {
+				mut b := new_builder(s.len + with.len)
+				builder = &b
+			}
 			unsafe { builder.write_ptr(s.str + last, offsets[0] - last) }
 			if repl_grps {
 				replace_with(mut builder, s, with, offsets)
@@ -43,14 +50,14 @@ pub fn (r &RegEx) replace_first(s string, with string, opt int) !string {
 	repl_grps := opt & pcre.opt_replace_groups != 0
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
-	mut builder := new_builder(s.len + with.len)
 	stop := s.len
 	code := C.pcre_exec(r.re, r.extra, s.str, stop, 0, opt, offsets.data, offsetcount)
 	return if code == C.PCRE_ERROR_NOMATCH {
-		s
+		NoMatch{}
 	} else if code <= 0 {
 		fail_exec(code)
 	} else {
+		mut builder := new_builder(s.len + with.len)
 		unsafe { builder.write_ptr(s.str, offsets[0]) }
 		if repl_grps {
 			replace_with(mut builder, s, with, offsets)
