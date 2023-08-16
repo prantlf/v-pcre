@@ -1,0 +1,571 @@
+Only in /Users/ferdipr/Sources/local/pcre-8.45: 132html
+Only in /Users/ferdipr/Sources/local/pcre-8.45: AUTHORS
+Only in /Users/ferdipr/Sources/local/pcre-8.45: CMakeLists.txt
+Only in /Users/ferdipr/Sources/local/pcre-8.45: COPYING
+Only in /Users/ferdipr/Sources/local/pcre-8.45: ChangeLog
+Only in /Users/ferdipr/Sources/local/pcre-8.45: CheckMan
+Only in /Users/ferdipr/Sources/local/pcre-8.45: CleanTxt
+Only in /Users/ferdipr/Sources/local/pcre-8.45: Detrail
+Only in /Users/ferdipr/Sources/local/pcre-8.45: HACKING
+Only in /Users/ferdipr/Sources/local/pcre-8.45: INSTALL
+Only in /Users/ferdipr/Sources/local/pcre-8.45: LICENCE
+Only in /Users/ferdipr/Sources/local/pcre-8.45: Makefile
+Only in /Users/ferdipr/Sources/local/pcre-8.45: Makefile.am
+Only in /Users/ferdipr/Sources/local/pcre-8.45: Makefile.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: NEWS
+Only in /Users/ferdipr/Sources/local/pcre-8.45: NON-AUTOTOOLS-BUILD
+Only in /Users/ferdipr/Sources/local/pcre-8.45: NON-UNIX-USE
+Only in /Users/ferdipr/Sources/local/pcre-8.45: PrepareRelease
+Only in /Users/ferdipr/Sources/local/pcre-8.45: README
+Only in /Users/ferdipr/Sources/local/pcre-8.45: RunGrepTest
+Only in /Users/ferdipr/Sources/local/pcre-8.45: RunTest
+Only in /Users/ferdipr/Sources/local/pcre-8.45: RunTest.bat
+Only in /Users/ferdipr/Sources/local/pcre-8.45: aclocal.m4
+Only in /Users/ferdipr/Sources/local/pcre-8.45: ar-lib
+Only in /Users/ferdipr/Sources/local/pcre-8.45: cmake
+Only in /Users/ferdipr/Sources/local/pcre-8.45: compile
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config-cmake.h.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config.guess
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/config.h libpcre/config.h
+--- /Users/ferdipr/Sources/local/pcre-8.45/config.h	2023-08-15 11:02:13
++++ libpcre/config.h	2023-08-15 11:39:29
+@@ -276,6 +276,7 @@
+ 
+ /* Define to any value if linking statically (TODO: make nice with Libtool) */
+ /* #undef PCRE_STATIC */
++#define PCRE_STATIC /**/
+ 
+ /* When calling PCRE via the POSIX interface, additional working storage is
+    required for holding the pointers to capturing substrings because PCRE
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config.h.generic
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config.h.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config.log
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config.status
+Only in /Users/ferdipr/Sources/local/pcre-8.45: config.sub
+Only in /Users/ferdipr/Sources/local/pcre-8.45: configure
+Only in /Users/ferdipr/Sources/local/pcre-8.45: configure.ac
+Only in /Users/ferdipr/Sources/local/pcre-8.45: depcomp
+Only in /Users/ferdipr/Sources/local/pcre-8.45: dftables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: doc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: install-sh
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre.la
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre.pc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre.pc.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre16.pc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre16.pc.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre32.pc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre32.pc.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_byte_order.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_chartables.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_compile.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_config.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_dfa_exec.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_exec.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_fullinfo.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_get.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_globals.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_jit_compile.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_maketables.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_newline.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_ord2utf8.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_refcount.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_string_utils.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_study.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_tables.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_ucd.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_valid_utf8.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_version.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcre_la-pcre_xclass.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcrecpp.la
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcrecpp.pc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcrecpp.pc.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcrecpp_la-pcre_scanner.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcrecpp_la-pcre_stringpiece.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcrecpp_la-pcrecpp.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcreposix.la
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcreposix.pc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcreposix.pc.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libpcreposix_la-pcreposix.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: libtool
+Only in /Users/ferdipr/Sources/local/pcre-8.45: ltmain.sh
+Only in /Users/ferdipr/Sources/local/pcre-8.45: m4
+Only in /Users/ferdipr/Sources/local/pcre-8.45: makevp.bat
+Only in /Users/ferdipr/Sources/local/pcre-8.45: makevp_c.txt
+Only in /Users/ferdipr/Sources/local/pcre-8.45: makevp_l.txt
+Only in /Users/ferdipr/Sources/local/pcre-8.45: missing
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre-config
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre-config.in
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre.h libpcre/pcre.h
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre.h	2023-08-15 11:02:12
++++ libpcre/pcre.h	2023-08-15 21:17:59
+@@ -321,7 +321,63 @@
+ 
+ /* Types */
+ 
++typedef unsigned char pcre_uint8;
++
++#if USHRT_MAX == 65535
++typedef unsigned short pcre_uint16;
++typedef short pcre_int16;
++#define PCRE_UINT16_MAX USHRT_MAX
++#define PCRE_INT16_MAX SHRT_MAX
++#elif UINT_MAX == 65535
++typedef unsigned int pcre_uint16;
++typedef int pcre_int16;
++#define PCRE_UINT16_MAX UINT_MAX
++#define PCRE_INT16_MAX INT_MAX
++#else
++#error Cannot determine a type for 16-bit integers
++#endif
++
++#if UINT_MAX == 4294967295U
++typedef unsigned int pcre_uint32;
++typedef int pcre_int32;
++#define PCRE_UINT32_MAX UINT_MAX
++#define PCRE_INT32_MAX INT_MAX
++#elif ULONG_MAX == 4294967295UL
++typedef unsigned long int pcre_uint32;
++typedef long int pcre_int32;
++#define PCRE_UINT32_MAX ULONG_MAX
++#define PCRE_INT32_MAX LONG_MAX
++#else
++#error Cannot determine a type for 32-bit integers
++#endif
++
++#if 0
+ struct real_pcre8_or_16;          /* declaration; the definition is private  */
++#endif
++
++typedef struct real_pcre8_or_16 {
++  pcre_uint32 magic_number;
++  pcre_uint32 size;               /* Total that was malloced */
++  pcre_uint32 options;            /* Public options */
++  pcre_uint32 flags;              /* Private flags */
++  pcre_uint32 limit_match;        /* Limit set from regex */
++  pcre_uint32 limit_recursion;    /* Limit set from regex */
++  pcre_uint16 first_char;         /* Starting character */
++  pcre_uint16 req_char;           /* This character must be seen */
++  pcre_uint16 max_lookbehind;     /* Longest lookbehind (characters) */
++  pcre_uint16 top_bracket;        /* Highest numbered group */
++  pcre_uint16 top_backref;        /* Highest numbered back reference */
++  pcre_uint16 name_table_offset;  /* Offset to name table that follows */
++  pcre_uint16 name_entry_size;    /* Size of any name items */
++  pcre_uint16 name_count;         /* Number of name items */
++  pcre_uint16 ref_count;          /* Reference count */
++  pcre_uint16 dummy1;             /* To ensure size is a multiple of 8 */
++  pcre_uint16 dummy2;             /* To ensure size is a multiple of 8 */
++  pcre_uint16 dummy3;             /* To ensure size is a multiple of 8 */
++  const pcre_uint8 *tables;       /* Pointer to tables or NULL for std */
++  void             *nullpad;      /* NULL padding */
++} real_pcre8_or_16;
++
+ typedef struct real_pcre8_or_16 pcre;
+ 
+ struct real_pcre8_or_16;          /* declaration; the definition is private  */
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre.h.generic
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre.h.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_byte_order.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_chartables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_compile.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_config.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_dfa_exec.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_exec.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_fullinfo.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_get.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_globals.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_jit_compile.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_maketables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_newline.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_ord2utf16.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_printint.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_refcount.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_string_utils.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_study.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_tables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_ucd.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_utf16_utils.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_valid_utf16.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_version.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre16_xclass.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_byte_order.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_chartables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_compile.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_config.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_dfa_exec.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_exec.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_fullinfo.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_get.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_globals.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_jit_compile.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_maketables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_newline.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_ord2utf32.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_printint.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_refcount.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_string_utils.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_study.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_tables.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_ucd.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_utf32_utils.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_valid_utf32.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_version.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre32_xclass.c
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_byte_order.c libpcre/pcre_byte_order.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_byte_order.c	2014-04-03 18:50:52
++++ libpcre/pcre_byte_order.c	2023-08-15 11:39:29
+@@ -43,9 +43,9 @@
+ auxiliary local function to flip the appropriate bytes. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_chartables.c libpcre/pcre_chartables.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_chartables.c	2014-01-31 15:32:51
++++ libpcre/pcre_chartables.c	2023-08-15 11:39:29
+@@ -20,9 +20,9 @@
+ header ensures that the array gets flagged as "someone outside this compilation
+ unit might reference this" and so it will always be supplied to the linker. */
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_chartables.c.dist
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_compile.c libpcre/pcre_compile.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_compile.c	2021-06-15 18:13:53
++++ libpcre/pcre_compile.c	2023-08-15 11:39:29
+@@ -42,9 +42,9 @@
+ supporting internal functions that are not used by other modules. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #define NLBLOCK cd             /* Block containing newline information */
+ #define PSSTART start_pattern  /* Field containing pattern start */
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_config.c libpcre/pcre_config.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_config.c	2014-01-31 15:32:08
++++ libpcre/pcre_config.c	2023-08-15 11:39:29
+@@ -41,9 +41,9 @@
+ /* This module contains the external function pcre_config(). */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ /* Keep the original link size. */
+ static int real_link_size = LINK_SIZE;
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_dfa_exec.c libpcre/pcre_dfa_exec.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_dfa_exec.c	2017-11-16 19:00:02
++++ libpcre/pcre_dfa_exec.c	2023-08-15 11:39:29
+@@ -72,9 +72,9 @@
+ 
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #define NLBLOCK md             /* Block containing newline information */
+ #define PSSTART start_subject  /* Field containing processed string start */
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_exec.c libpcre/pcre_exec.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_exec.c	2021-06-14 13:14:38
++++ libpcre/pcre_exec.c	2023-08-15 11:39:29
+@@ -41,9 +41,9 @@
+ pattern matching using an NFA algorithm, trying to mimic Perl as closely as
+ possible. There are also some static supporting functions. */
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #define NLBLOCK md             /* Block containing newline information */
+ #define PSSTART start_subject  /* Field containing processed string start */
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_fullinfo.c libpcre/pcre_fullinfo.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_fullinfo.c	2014-01-31 15:32:54
++++ libpcre/pcre_fullinfo.c	2023-08-15 11:39:29
+@@ -42,9 +42,9 @@
+ information about a compiled pattern. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_get.c libpcre/pcre_get.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_get.c	2017-03-27 17:53:18
++++ libpcre/pcre_get.c	2023-08-15 11:39:29
+@@ -43,9 +43,9 @@
+ for these functions came from Scott Wimer. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_globals.c libpcre/pcre_globals.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_globals.c	2014-02-09 12:58:40
++++ libpcre/pcre_globals.c	2023-08-15 11:39:29
+@@ -52,9 +52,9 @@
+ Also, when compiling for Virtual Pascal, things are done differently, and
+ global variables are not used. */
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_internal.h libpcre/pcre_internal.h
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_internal.h	2017-06-13 18:49:46
++++ libpcre/pcre_internal.h	2023-08-15 21:17:59
+@@ -191,6 +191,7 @@
+ systems. Instead we make use of the maximum sizes that are available at
+ preprocessor time in standard C environments. */
+ 
++#if 0
+ typedef unsigned char pcre_uint8;
+ 
+ #if USHRT_MAX == 65535
+@@ -220,6 +221,7 @@
+ #else
+ #error Cannot determine a type for 32-bit integers
+ #endif
++#endif
+ 
+ /* When checking for integer overflow in pcre_compile(), we need to handle
+ large integers. If a 64-bit integer type is available, we can use that.
+@@ -2322,6 +2324,7 @@
+ *** WARNING ***
+ */
+ 
++#if 0
+ typedef struct real_pcre8_or_16 {
+   pcre_uint32 magic_number;
+   pcre_uint32 size;               /* Total that was malloced */
+@@ -2344,6 +2347,7 @@
+   const pcre_uint8 *tables;       /* Pointer to tables or NULL for std */
+   void             *nullpad;      /* NULL padding */
+ } real_pcre8_or_16;
++#endif
+ 
+ typedef struct real_pcre8_or_16 real_pcre;
+ typedef struct real_pcre8_or_16 real_pcre16;
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_jit_compile.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_jit_test.c
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_maketables.c libpcre/pcre_maketables.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_maketables.c	2014-01-31 15:32:53
++++ libpcre/pcre_maketables.c	2023-08-15 11:42:44
+@@ -45,9 +45,9 @@
+ 
+ 
+ #ifndef DFTABLES
+-#  ifdef HAVE_CONFIG_H
++/* #  ifdef HAVE_CONFIG_H */
+ #  include "config.h"
+-#  endif
++/* #  endif */
+ #  include "pcre_internal.h"
+ #endif
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_newline.c libpcre/pcre_newline.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_newline.c	2014-01-31 15:32:09
++++ libpcre/pcre_newline.c	2023-08-15 11:39:29
+@@ -47,9 +47,9 @@
+ http://unicode.org/unicode/reports/tr18/. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_ord2utf8.c libpcre/pcre_ord2utf8.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_ord2utf8.c	2014-01-31 15:32:08
++++ libpcre/pcre_ord2utf8.c	2023-08-15 11:39:29
+@@ -41,9 +41,9 @@
+ /* This file contains a private PCRE function that converts an ordinal
+ character value into a UTF8 string. */
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #define COMPILE_PCRE8
+ 
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_printint.c
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_refcount.c libpcre/pcre_refcount.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_refcount.c	2014-01-31 15:32:12
++++ libpcre/pcre_refcount.c	2023-08-15 11:39:29
+@@ -44,9 +44,9 @@
+ shared by different users. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_scanner.cc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_scanner_unittest
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_scanner_unittest-pcre_scanner_unittest.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_scanner_unittest.cc
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_string_utils.c libpcre/pcre_string_utils.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_string_utils.c	2014-01-31 15:32:13
++++ libpcre/pcre_string_utils.c	2023-08-15 11:39:29
+@@ -42,9 +42,9 @@
+ of strings for different data item sizes. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_stringpiece.cc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_stringpiece.h
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_stringpiece.h.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_stringpiece_unittest
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_stringpiece_unittest-pcre_stringpiece_unittest.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_stringpiece_unittest.cc
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_study.c libpcre/pcre_study.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_study.c	2016-02-28 14:59:46
++++ libpcre/pcre_study.c	2023-08-15 11:39:29
+@@ -42,9 +42,9 @@
+ supporting functions. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_tables.c libpcre/pcre_tables.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_tables.c	2017-04-30 15:41:32
++++ libpcre/pcre_tables.c	2023-08-15 11:39:29
+@@ -45,9 +45,9 @@
+ clashes with the library. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_ucd.c libpcre/pcre_ucd.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_ucd.c	2017-02-24 18:15:46
++++ libpcre/pcre_ucd.c	2023-08-15 11:39:29
+@@ -10,9 +10,9 @@
+ 
+ #ifndef PCRE_INCLUDED
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_valid_utf8.c libpcre/pcre_valid_utf8.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_valid_utf8.c	2014-01-31 15:32:54
++++ libpcre/pcre_valid_utf8.c	2023-08-15 11:39:29
+@@ -42,9 +42,9 @@
+ strings. */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcre_version.c
+diff -u /Users/ferdipr/Sources/local/pcre-8.45/pcre_xclass.c libpcre/pcre_xclass.c
+--- /Users/ferdipr/Sources/local/pcre-8.45/pcre_xclass.c	2015-11-17 18:45:24
++++ libpcre/pcre_xclass.c	2023-08-15 11:39:29
+@@ -42,9 +42,9 @@
+ class. It is used by both pcre_exec() and pcre_def_exec(). */
+ 
+ 
+-#ifdef HAVE_CONFIG_H
++/* #ifdef HAVE_CONFIG_H */
+ #include "config.h"
+-#endif
++/* #endif */
+ 
+ #include "pcre_internal.h"
+ 
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpp.cc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpp.h
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpp_internal.h
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpp_unittest
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpp_unittest-pcrecpp_unittest.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpp_unittest.cc
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpparg.h
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcrecpparg.h.in
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcredemo.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcregexp.pas
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcregrep
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcregrep-pcregrep.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcregrep.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcreposix.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcreposix.h
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcretest
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcretest-pcre_printint.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcretest-pcretest.o
+Only in /Users/ferdipr/Sources/local/pcre-8.45: pcretest.c
+Only in /Users/ferdipr/Sources/local/pcre-8.45: perltest.pl
+Only in /Users/ferdipr/Sources/local/pcre-8.45: sljit
+Only in /Users/ferdipr/Sources/local/pcre-8.45: stamp-h1
+Only in /Users/ferdipr/Sources/local/pcre-8.45: test-driver
+Only in /Users/ferdipr/Sources/local/pcre-8.45: testdata
