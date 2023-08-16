@@ -1,6 +1,6 @@
 # PCRE - Perl Compatible Regular Expressions - for V
 
-The [PCRE] library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
+The [PCRE] library is a [fast](bench/README.md) set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
 
 This package uses the older, but still widely deployed PCRE library, originally released in 1997, at version 8.45.
 
