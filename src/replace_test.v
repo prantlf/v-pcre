@@ -31,6 +31,22 @@ fn test_replace_no() {
 	assert false
 }
 
+fn test_replace_same() {
+	re.replace('a', 'a', 0) or {
+		assert err is NoReplace
+		return
+	}
+	assert false
+}
+
+fn test_replace_only_one_same() {
+	re_w := pcre_compile('(\\w)', 0)!
+	defer {
+		re_w.free()
+	}
+	assert re_w.replace('ab', 'a', 0)! == 'aa'
+}
+
 fn test_replace_yes() {
 	assert re.replace('a', 'c', 0)! == 'c'
 }
@@ -67,6 +83,14 @@ fn test_replace_first_no() {
 	assert false
 }
 
+fn test_replace_first_same() {
+	re.replace_first('a', 'a', 0) or {
+		assert err is NoReplace
+		return
+	}
+	assert false
+}
+
 fn test_replace_first_yes() {
 	assert re.replace_first('a', 'c', 0)! == 'c'
 }
@@ -96,7 +120,19 @@ fn test_replace_group_within() {
 }
 
 fn test_replace_whole() {
-	assert re_grp.replace('ab', '$0', opt_replace_groups)! == 'ab'
+	assert re_grp.replace('ab', '$0c', opt_replace_groups)! == 'abc'
+}
+
+fn test_replace_group_same() {
+	re_w := pcre_compile('(\\w)', 0)!
+	defer {
+		re_w.free()
+	}
+	re_w.replace('ab', '$1', opt_replace_groups) or {
+		assert err is NoReplace
+		return
+	}
+	assert false
 }
 
 fn test_replace_group_out() {

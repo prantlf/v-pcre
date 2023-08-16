@@ -39,38 +39,41 @@ fn (e CompileError) msg() string {
 // C5   Affects exec; takes precedence over settings passed from pcre_compile
 // C6   Affects replace
 
-pub const opt_caseless = 0x00000001 /* C1 */
-pub const opt_multiline = 0x00000002 /* C1 */
-pub const opt_dotall = 0x00000004 /* C1 */
-pub const opt_extended = 0x00000008 /* C1 */
-pub const opt_anchored = 0x00000010 /* C4 C5 */
-pub const opt_dollar_endonly = 0x00000020 /* C2 */
-pub const opt_extra = 0x00000040 /* C1 */
-pub const opt_notbol = 0x00000080 /* C5 */
-pub const opt_noteol = 0x00000100 /* C5 */
-pub const opt_ungreedy = 0x00000200 /* C1 */
-pub const opt_notempty = 0x00000400 /* C5 */
-pub const opt_utf8 = 0x00000800 /* C4 */
-pub const opt_no_auto_capture = 0x00001000 /* C1 */
-pub const opt_no_utf8_check = 0x00002000 /* C1 C5 */
-pub const opt_auto_callout = 0x00004000 /* C1 */
-pub const opt_partial_soft = 0x00008000 /* C5 */
-pub const opt_never_utf = 0x00010000 /* C1 */
-pub const opt_no_auto_possess = 0x00020000 /* C1 */
-pub const opt_firstline = 0x00040000 /* C3 */
-pub const opt_dupnames = 0x00080000 /* C1 */
-pub const opt_newline_cr = 0x00100000 /* C3 C5 */
-pub const opt_newline_lf = 0x00200000 /* C3 C5 */
-pub const opt_newline_crlf = 0x00300000 /* C3 C5 */
-pub const opt_newline_any = 0x00400000 /* C3 C5 */
-pub const opt_newline_anycrlf = 0x00500000 /* C3 C5 */
-pub const opt_bsr_anycrlf = 0x00800000 /* C3 C5 */
-pub const opt_bsr_unicode = 0x01000000 /* C3 C5 */
-pub const opt_javascript_compat = 0x02000000 /* C4 */
-pub const opt_no_start_optimize = 0x04000000 /* C2 C5 */
-pub const opt_partial_hard = 0x08000000 /* C5 */
-pub const opt_notempty_atstart = 0x10000000 /* C5 */
-pub const opt_ucp = 0x20000000 /* C3 */
+pub const (
+	opt_caseless          = 0x00000001
+	/* C1 */opt_multiline         = 0x00000002
+	/* C1 */opt_dotall            = 0x00000004
+	/* C1 */opt_extended          = 0x00000008
+	/* C1 */opt_anchored          = 0x00000010
+	/* C4 C5 */opt_dollar_endonly    = 0x00000020
+	/* C2 */opt_extra             = 0x00000040
+	/* C1 */opt_notbol            = 0x00000080
+	/* C5 */opt_noteol            = 0x00000100
+	/* C5 */opt_ungreedy          = 0x00000200
+	/* C1 */opt_notempty          = 0x00000400
+	/* C5 */opt_utf8              = 0x00000800
+	/* C4 */opt_no_auto_capture   = 0x00001000
+	/* C1 */opt_no_utf8_check     = 0x00002000
+	/* C1 C5 */opt_auto_callout      = 0x00004000
+	/* C1 */opt_partial_soft      = 0x00008000
+	/* C5 */opt_never_utf         = 0x00010000
+	/* C1 */opt_no_auto_possess   = 0x00020000
+	/* C1 */opt_firstline         = 0x00040000
+	/* C3 */opt_dupnames          = 0x00080000
+	/* C1 */opt_newline_cr        = 0x00100000
+	/* C3 C5 */opt_newline_lf        = 0x00200000
+	/* C3 C5 */opt_newline_crlf      = 0x00300000
+	/* C3 C5 */opt_newline_any       = 0x00400000
+	/* C3 C5 */opt_newline_anycrlf   = 0x00500000
+	/* C3 C5 */opt_bsr_anycrlf       = 0x00800000
+	/* C3 C5 */opt_bsr_unicode       = 0x01000000
+	/* C3 C5 */opt_javascript_compat = 0x02000000
+	/* C4 */opt_no_start_optimize = 0x04000000
+	/* C2 C5 */opt_partial_hard      = 0x08000000
+	/* C5 */opt_notempty_atstart  = 0x10000000
+	/* C5 */opt_ucp               = 0x20000000
+		/* C3 */
+)
 
 pub fn pcre_compile(source string, options int) !&RegEx {
 	mut code := 0

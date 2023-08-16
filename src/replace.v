@@ -1,6 +1,7 @@
 module pcre
 
 import strings { Builder, new_builder }
+import prantlf.strutil { compare_str_within_nochk }
 
 pub const opt_replace_groups = 0x40000000 /* C6 */
 
@@ -10,6 +11,7 @@ pub fn (r &RegEx) replace(s string, with string, opt int) !string {
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
 	mut builder := unsafe { &Builder(nil) }
+	mut replaced := false
 	mut pos := 0
 	mut last := 0
 	stop := s.len
@@ -27,18 +29,32 @@ pub fn (r &RegEx) replace(s string, with string, opt int) !string {
 				mut b := new_builder(s.len + with.len)
 				builder = &b
 			}
-			unsafe { builder.write_ptr(s.str + last, offsets[0] - last) }
+			start_m := offsets[0]
+			pos = offsets[1]
+			unsafe { builder.write_ptr(s.str + last, start_m - last) }
 			if repl_grps {
+				start_r := builder.len
 				replace_with(mut builder, s, with, offsets)
+				if !replaced {
+					rep := unsafe { tos(&u8(builder.data) + start_r, builder.len - start_r) }
+					if unsafe { compare_str_within_nochk(rep, s, start_m, pos) } != 0 {
+						replaced = true
+					}
+				}
 			} else {
+				if !replaced && unsafe { compare_str_within_nochk(with, s, start_m, pos) } != 0 {
+					replaced = true
+				}
 				builder.write_string(with)
 			}
-			pos = offsets[1]
 			last = pos
 			if pos == stop {
 				break
 			}
 		}
+	}
+	if !replaced {
+		return NoReplace{}
 	}
 	if last < stop {
 		unsafe { builder.write_ptr(s.str + last, stop - last) }
@@ -52,24 +68,33 @@ pub fn (r &RegEx) replace_first(s string, with string, opt int) !string {
 	offsets := []int{len: offsetcount}
 	stop := s.len
 	code := C.pcre_exec(r.re, r.extra, s.str, stop, 0, opt, offsets.data, offsetcount)
-	return if code == C.PCRE_ERROR_NOMATCH {
-		NoMatch{}
+	if code == C.PCRE_ERROR_NOMATCH {
+		return NoMatch{}
 	} else if code <= 0 {
-		fail_exec(code)
+		return fail_exec(code)
 	} else {
 		mut builder := new_builder(s.len + with.len)
-		unsafe { builder.write_ptr(s.str, offsets[0]) }
+		start_m := offsets[0]
+		pos := offsets[1]
+		unsafe { builder.write_ptr(s.str, start_m) }
 		if repl_grps {
+			start_r := builder.len
 			replace_with(mut builder, s, with, offsets)
+			rep := unsafe { tos(&u8(builder.data) + start_r, builder.len - start_r) }
+			if unsafe { compare_str_within_nochk(rep, s, start_m, pos) } == 0 {
+				return NoReplace{}
+			}
 		} else {
+			if unsafe { compare_str_within_nochk(with, s, start_m, pos) } == 0 {
+				return NoReplace{}
+			}
 			builder.write_string(with)
 		}
-		pos := offsets[1]
 		len := stop - pos
 		if len > 0 {
 			unsafe { builder.write_ptr(s.str + pos, len) }
 		}
-		builder.str()
+		return builder.str()
 	}
 }
 
