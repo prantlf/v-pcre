@@ -64,10 +64,11 @@ pub fn (r &RegEx) replace(s string, with string, opt int) !string {
 
 pub fn (r &RegEx) replace_first(s string, with string, opt int) !string {
 	repl_grps := opt & pcre.opt_replace_groups != 0
+	exec_opt := opt & ~pcre.opt_replace_groups
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
 	stop := s.len
-	code := C.pcre_exec(r.re, r.extra, s.str, stop, 0, opt, offsets.data, offsetcount)
+	code := C.pcre_exec(r.re, r.extra, s.str, stop, 0, exec_opt, offsets.data, offsetcount)
 	if code == C.PCRE_ERROR_NOMATCH {
 		return NoMatch{}
 	} else if code <= 0 {
