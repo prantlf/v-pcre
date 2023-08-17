@@ -1,5 +1,13 @@
 # Changes
 
+## [0.1.1](https://github.com/prantlf/v-pcre/compare/v0.1.0...v0.1.1) (2023-08-17)
+
+### Bug Fixes
+
+* Do not pass opt_replace_groups to pcre_exec ([588c73c](https://github.com/prantlf/v-pcre/commit/588c73ca6dfb310d037bdeb7d897e2097bd40ecd))
+* Handle any combination or \r and \n as eoln ([4cdadbf](https://github.com/prantlf/v-pcre/commit/4cdadbfe8c029c9147411c4b2e5595a0f298d3df))
+* Remove unused RegExp pointer from Match ([56d9a42](https://github.com/prantlf/v-pcre/commit/56d9a422c59ef12ec9da9de1f3098c93a1edbd07))
+
 ## [0.1.0](https://github.com/prantlf/v-pcre/compare/v0.0.2...v0.1.0) (2023-08-17)
 
 ### Features
