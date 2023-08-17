@@ -200,7 +200,7 @@ sure both macros are undefined; an emulation function will then be used. */
    0x25) that are used as the NL line terminator that is equivalent to ASCII
    LF. In both ASCII and EBCDIC environments the value can also be -1 (ANY),
    or -2 (ANYCRLF). */
-#define NEWLINE 10
+#define NEWLINE -2
 
 /* PCRE uses recursive function calls to handle backtracking while matching.
    This can sometimes be a problem on systems that have stacks of limited
