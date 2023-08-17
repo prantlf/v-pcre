@@ -53,38 +53,16 @@ The following types, constants, functions and methods are exported:
 
     struct RegEx {}
 
-    struct Match {
-      groups      []Group
-      names       map[string][]int
-    }
-
-    struct Group {
-      start int
-      end   int
-    }
-
-    struct MetaCharTable {
-      esc              int
-      anychar          int
-      anytime          int
-      zero_or_one_time int
-      one_or_more_time int
-      anychar_anytime  int
-    }
-
-    struct Syntax {
-      op              int
-      op2             int
-      behavior        int
-      options         int
-      meta_char_table MetaCharTable
-    }
+    struct Match {}
 
     struct NoMatch {}
 
+    struct NoReplace {}
+
     struct CompileError {
-      msg  string
-      code int
+      msg    string
+      code   int
+      offset int
     }
 
     struct ExecuteError {
