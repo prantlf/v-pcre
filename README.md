@@ -72,46 +72,46 @@ The following types, constants, functions and methods are exported:
 
 ### Constants
 
-		// C1   Affects compile only
-		// C2   Does not affect compile; affects exec
-		// C3   Affects compile, exec
-		// C4   Affects compile, exec, study
-		// C5   Affects exec; takes precedence over settings passed from pcre_compile
-		// C6   Affects replace
+    // C1   Affects compile only
+    // C2   Does not affect compile; affects exec
+    // C3   Affects compile, exec
+    // C4   Affects compile, exec, study
+    // C5   Affects exec; takes precedence over settings passed from pcre_compile
+    // C6   Affects replace
 
-		opt_caseless /* C1 */
-		opt_multiline /* C1 */
-		opt_dotall /* C1 */
-		opt_extended /* C1 */
-		opt_anchored /* C4 C5 */
-		opt_dollar_endonly /* C2 */
-		opt_extra /* C1 */
-		opt_notbol /* C5 */
-		opt_noteol /* C5 */
-		opt_ungreedy /* C1 */
-		opt_notempty /* C5 */
-		opt_utf8 /* C4 */
-		opt_no_auto_capture /* C1 */
-		opt_no_utf8_check /* C1 C5 */
-		opt_auto_callout /* C1 */
-		opt_partial_soft /* C5 */
-		opt_never_utf /* C1 */
-		opt_no_auto_possess /* C1 */
-		opt_firstline /* C3 */
-		opt_dupnames /* C1 */
-		opt_newline_cr /* C3 C5 */
-		opt_newline_lf /* C3 C5 */
-		opt_newline_crlf /* C3 C5 */
-		opt_newline_any /* C3 C5 */
-		opt_newline_anycrlf /* C3 C5 */
-		opt_bsr_anycrlf /* C3 C5 */
-		opt_bsr_unicode /* C3 C5 */
-		opt_javascript_compat /* C4 */
-		opt_no_start_optimize /* C2 C5 */
-		opt_partial_hard /* C5 */
-		opt_notempty_atstart /* C5 */
-		opt_ucp /* C3 */
-		opt_replace_groups /* C6 */
+    opt_caseless /* C1 */
+    opt_multiline /* C1 */
+    opt_dotall /* C1 */
+    opt_extended /* C1 */
+    opt_anchored /* C4 C5 */
+    opt_dollar_endonly /* C2 */
+    opt_extra /* C1 */
+    opt_notbol /* C5 */
+    opt_noteol /* C5 */
+    opt_ungreedy /* C1 */
+    opt_notempty /* C5 */
+    opt_utf8 /* C4 */
+    opt_no_auto_capture /* C1 */
+    opt_no_utf8_check /* C1 C5 */
+    opt_auto_callout /* C1 */
+    opt_partial_soft /* C5 */
+    opt_never_utf /* C1 */
+    opt_no_auto_possess /* C1 */
+    opt_firstline /* C3 */
+    opt_dupnames /* C1 */
+    opt_newline_cr /* C3 C5 */
+    opt_newline_lf /* C3 C5 */
+    opt_newline_crlf /* C3 C5 */
+    opt_newline_any /* C3 C5 */
+    opt_newline_anycrlf /* C3 C5 */
+    opt_bsr_anycrlf /* C3 C5 */
+    opt_bsr_unicode /* C3 C5 */
+    opt_javascript_compat /* C4 */
+    opt_no_start_optimize /* C2 C5 */
+    opt_partial_hard /* C5 */
+    opt_notempty_atstart /* C5 */
+    opt_ucp /* C3 */
+    opt_replace_groups /* C6 */
 
 ### Functions
 

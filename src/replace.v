@@ -3,11 +3,9 @@ module pcre
 import strings { Builder, new_builder }
 import prantlf.strutil { compare_str_within_nochk }
 
-pub const opt_replace_groups = 0x40000000 /* C6 */
-
 pub fn (r &RegEx) replace(s string, with string, opt int) !string {
-	repl_grps := opt & pcre.opt_replace_groups != 0
-	exec_opt := opt & ~pcre.opt_replace_groups
+	repl_grps := opt & opt_replace_groups != 0
+	exec_opt := opt & ~opt_replace_groups
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
 	mut builder := unsafe { &Builder(nil) }
@@ -63,8 +61,8 @@ pub fn (r &RegEx) replace(s string, with string, opt int) !string {
 }
 
 pub fn (r &RegEx) replace_first(s string, with string, opt int) !string {
-	repl_grps := opt & pcre.opt_replace_groups != 0
-	exec_opt := opt & ~pcre.opt_replace_groups
+	repl_grps := opt & opt_replace_groups != 0
+	exec_opt := opt & ~opt_replace_groups
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
 	stop := s.len
