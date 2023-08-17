@@ -19,19 +19,6 @@ pub:
 	names    int
 }
 
-[noinit]
-pub struct CompileError {
-	Error
-pub:
-	msg    string
-	code   int
-	offset int = -1
-}
-
-fn (e CompileError) msg() string {
-	return e.msg
-}
-
 // C1   Affects compile only
 // C2   Does not affect compile; affects exec
 // C3   Affects compile, exec
@@ -75,7 +62,12 @@ pub const (
 		/* C3 */
 )
 
+[inline]
 pub fn pcre_compile(source string, options int) !&RegEx {
+	return compile(source, options)!
+}
+
+pub fn compile(source string, options int) !&RegEx {
 	mut code := 0
 	mut err := &u8(0)
 	mut offset := 0

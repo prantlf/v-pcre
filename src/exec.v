@@ -23,7 +23,7 @@ pub fn (r &RegEx) exec_within_nochk(subject string, start int, end int, options 
 	} else if code <= 0 {
 		fail_exec(code)
 	} else {
-		Match{r, offsets}
+		Match{offsets}
 	}
 }
 

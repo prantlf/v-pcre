@@ -1,6 +1,19 @@
 module pcre
 
 [noinit]
+pub struct CompileError {
+	Error
+pub:
+	msg    string
+	code   int
+	offset int = -1
+}
+
+fn (e &CompileError) msg() string {
+	return e.msg
+}
+
+[noinit]
 pub struct ExecError {
 	Error
 pub:

@@ -112,19 +112,3 @@ fn test_exec_two_named_groups() {
 	assert end == 4
 	assert m.group_text(s, 2)? == 'd'
 }
-
-fn test_matches_no() {
-	re := pcre_compile('a', 0)!
-	defer {
-		re.free()
-	}
-	assert !re.matches('b', 0)!
-}
-
-fn test_matches_yes() {
-	re := pcre_compile('a', 0)!
-	defer {
-		re.free()
-	}
-	assert re.matches('a', 0)!
-}

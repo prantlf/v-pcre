@@ -2,7 +2,6 @@ module pcre
 
 fn test_bounds_no_capture() {
 	m := Match{
-		re: unsafe { nil }
 		offsets: [1, 3, 0]
 	}
 	if _, _ := m.group_bounds(-1) {
@@ -18,7 +17,6 @@ fn test_bounds_no_capture() {
 
 fn test_bounds_one_capture() {
 	m := Match{
-		re: unsafe { nil }
 		offsets: [1, 3, 1, 2, 0, 0]
 	}
 	start, end := m.group_bounds(1)?
@@ -31,7 +29,6 @@ fn test_bounds_one_capture() {
 
 fn test_bounds_bad_capture() {
 	m := Match{
-		re: unsafe { nil }
 		offsets: [1, 3, -1, -1, 0, 0]
 	}
 	if _, _ := m.group_bounds(1) {
@@ -41,7 +38,6 @@ fn test_bounds_bad_capture() {
 
 fn test_text() {
 	m := Match{
-		re: unsafe { nil }
 		offsets: [1, 3, 1, 2, -1, -1, 0, 0]
 	}
 	if _, _ := m.group_text('abc', -1) {
