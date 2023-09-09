@@ -1,5 +1,11 @@
 # Changes
 
+## [0.2.0](https://github.com/prantlf/v-pcre/compare/v0.1.1...v0.2.0) (2023-09-09)
+
+### Features
+
+* Support partial matches ([ac4cec0](https://github.com/prantlf/v-pcre/commit/ac4cec0cd8827b0a7549f8644dfc2923437d0149))
+
 ## [0.1.1](https://github.com/prantlf/v-pcre/compare/v0.1.0...v0.1.1) (2023-08-17)
 
 ### Bug Fixes
