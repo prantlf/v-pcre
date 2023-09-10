@@ -1,5 +1,11 @@
 # Changes
 
+## [0.2.1](https://github.com/prantlf/v-pcre/compare/v0.2.0...v0.2.1) (2023-09-10)
+
+### Bug Fixes
+
+* Make the RegEx struct public ([ea7cbc0](https://github.com/prantlf/v-pcre/commit/ea7cbc0ba41d6a18e2d9487183db66170d5ebdda))
+
 ## [0.2.0](https://github.com/prantlf/v-pcre/compare/v0.1.1...v0.2.0) (2023-09-09)
 
 ### Features
