@@ -2,7 +2,7 @@
 
 The [PCRE] library is a [fast](bench/README.md) set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
 
-This package uses the older, but still widely deployed PCRE library, originally released in 1997, at version 8.45.
+This package uses the older, but still widely deployed PCRE library, originally released in 1997, at version 8.45. If you are interested in the current version, PCRE2, released in 2015 and now at version 10.42, see [prantlf.pcre2].
 
 ## Synopsis
 
@@ -316,3 +316,4 @@ Licensed under the MIT license.
 [exhaustive documentation]: https://www.pcre.org/original/doc/html/pcrepattern.html
 [pattern limits]: https://www.pcre.org/original/doc/html/pcrelimits.html
 [compatibility with PERL5]: https://www.pcre.org/original/doc/html/pcrecompat.html
+[prantlf.pcre2]: https://github.com/prantlf/v-pcre2
