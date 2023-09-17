@@ -1,24 +1,24 @@
 module pcre
 
 #flag -I @VROOT/libpcre
-#flag @VROOT/libpcre/pcre_byte_order.o
-#flag @VROOT/libpcre/pcre_chartables.o
-#flag @VROOT/libpcre/pcre_compile.o
-#flag @VROOT/libpcre/pcre_config.o
-#flag @VROOT/libpcre/pcre_exec.o
-#flag @VROOT/libpcre/pcre_fullinfo.o
-#flag @VROOT/libpcre/pcre_get.o
-#flag @VROOT/libpcre/pcre_globals.o
-#flag @VROOT/libpcre/pcre_maketables.o
-#flag @VROOT/libpcre/pcre_newline.o
-#flag @VROOT/libpcre/pcre_ord2utf8.o
-#flag @VROOT/libpcre/pcre_refcount.o
-#flag @VROOT/libpcre/pcre_string_utils.o
-#flag @VROOT/libpcre/pcre_study.o
-#flag @VROOT/libpcre/pcre_tables.o
-#flag @VROOT/libpcre/pcre_ucd.o
-#flag @VROOT/libpcre/pcre_valid_utf8.o
-#flag @VROOT/libpcre/pcre_xclass.o
+#flag @VROOT/libpcre/pcre_byte_order.c
+#flag @VROOT/libpcre/pcre_chartables.c
+#flag @VROOT/libpcre/pcre_compile.c
+#flag @VROOT/libpcre/pcre_config.c
+#flag @VROOT/libpcre/pcre_exec.c
+#flag @VROOT/libpcre/pcre_fullinfo.c
+#flag @VROOT/libpcre/pcre_get.c
+#flag @VROOT/libpcre/pcre_globals.c
+#flag @VROOT/libpcre/pcre_maketables.c
+#flag @VROOT/libpcre/pcre_newline.c
+#flag @VROOT/libpcre/pcre_ord2utf8.c
+#flag @VROOT/libpcre/pcre_refcount.c
+#flag @VROOT/libpcre/pcre_string_utils.c
+#flag @VROOT/libpcre/pcre_study.c
+#flag @VROOT/libpcre/pcre_tables.c
+#flag @VROOT/libpcre/pcre_ucd.c
+#flag @VROOT/libpcre/pcre_valid_utf8.c
+#flag @VROOT/libpcre/pcre_xclass.c
 #include <limits.h>
 #include "pcre.h"
 // #include "config.h"
@@ -66,5 +66,5 @@ fn C.pcre_fullinfo(re &C.pcre, extra_data &C.pcre_extra, what int, where voidptr
 
 fn C.pcre_exec(re &C.pcre, extra_data &C.pcre_extra, subject &u8, length int, start_offset int, options int, offsets &int, offsetcount int) int
 
-fn C.pcre_free(re &C.pcre)
-fn C.pcre_free_study(&C.pcre_extra)
+fn C.pcre_free_re(re &C.pcre)
+fn C.pcre_free_study(extra &C.pcre_extra)

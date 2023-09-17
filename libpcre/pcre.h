@@ -726,6 +726,8 @@ PCRE_EXP_DECL void pcre_jit_free_unused_memory(void);
 PCRE_EXP_DECL void pcre16_jit_free_unused_memory(void);
 PCRE_EXP_DECL void pcre32_jit_free_unused_memory(void);
 
+PCRE_EXP_DECL void pcre_free_re(pcre *);
+
 #ifdef __cplusplus
 }  /* extern "C" */
 #endif

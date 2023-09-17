@@ -8,6 +8,14 @@ fn test_empty() {
 	assert false
 }
 
+fn test_invalid() {
+	re := pcre_compile('(', 0) or {
+		assert err.msg() == 'missing ) at 1'
+		return
+	}
+	assert false
+}
+
 fn test_simple() {
 	re := pcre_compile('a', 0)!
 	defer {

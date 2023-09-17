@@ -84,7 +84,7 @@ pub fn compile(source string, options int) !&RegEx {
 	err = &char(0)
 	extra := C.pcre_study(re, options, &err)
 	if isnil(extra) {
-		C.pcre_free(re)
+		C.pcre_free_re(re)
 		msg := if isnil(err) {
 			'studying the regular expression failed'
 		} else {
@@ -99,7 +99,7 @@ pub fn compile(source string, options int) !&RegEx {
 	code = C.pcre_fullinfo(re, extra, C.PCRE_INFO_CAPTURECOUNT, &captures)
 	if code != 0 {
 		C.pcre_free_study(extra)
-		C.pcre_free(re)
+		C.pcre_free_re(re)
 		msg := 'getting the count of captures failed'
 		return CompileError{
 			msg: msg
@@ -111,7 +111,7 @@ pub fn compile(source string, options int) !&RegEx {
 	code = C.pcre_fullinfo(re, extra, C.PCRE_INFO_NAMECOUNT, &name_len)
 	if code != 0 {
 		C.pcre_free_study(extra)
-		C.pcre_free(re)
+		C.pcre_free_re(re)
 		msg := 'getting the count of named captures failed'
 		return CompileError{
 			msg: msg
@@ -126,7 +126,7 @@ pub fn compile(source string, options int) !&RegEx {
 		code = C.pcre_fullinfo(re, extra, C.PCRE_INFO_NAMETABLE, &name_table)
 		if code != 0 {
 			C.pcre_free_study(extra)
-			C.pcre_free(re)
+			C.pcre_free_re(re)
 			msg := 'getting the table of named captures failed'
 			return CompileError{
 				msg: msg
@@ -138,7 +138,7 @@ pub fn compile(source string, options int) !&RegEx {
 		code = C.pcre_fullinfo(re, extra, C.PCRE_INFO_NAMEENTRYSIZE, &name_entry_size)
 		if code != 0 {
 			C.pcre_free_study(extra)
-			C.pcre_free(re)
+			C.pcre_free_re(re)
 			msg := 'getting size of an entry in the table of named captures failed'
 			return CompileError{
 				msg: msg
@@ -168,7 +168,7 @@ pub fn compile(source string, options int) !&RegEx {
 
 pub fn (r &RegEx) free() {
 	C.pcre_free_study(r.extra)
-	C.pcre_free(r.re)
+	C.pcre_free_re(r.re)
 }
 
 pub fn (r &RegEx) group_index_by_name(name string) int {

@@ -9807,4 +9807,12 @@ return (pcre32 *)re;
 #endif
 }
 
+PCRE_EXP_DEFN void PCRE_CALL_CONVENTION
+pcre_free_re(pcre *re)
+{
+if (re == NULL)
+  return;
+PUBL(free)(re);
+}
+
 /* End of pcre_compile.c */
