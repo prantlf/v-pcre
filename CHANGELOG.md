@@ -1,5 +1,11 @@
 # Changes
 
+## [0.2.2](https://github.com/prantlf/v-pcre/compare/v0.2.1...v0.2.2) (2023-09-17)
+
+### Bug Fixes
+
+* Support build on windows ([61c634b](https://github.com/prantlf/v-pcre/commit/61c634bfa7b72a51c6272da6f460e8f848d292dc))
+
 ## [0.2.1](https://github.com/prantlf/v-pcre/compare/v0.2.0...v0.2.1) (2023-09-10)
 
 ### Bug Fixes
