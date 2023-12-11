@@ -1,5 +1,11 @@
 # Changes
 
+## [0.2.4](https://github.com/prantlf/v-pcre/compare/v0.2.3...v0.2.4) (2023-12-11)
+
+### Bug Fixes
+
+* Use flags to force static linking instead of config define ([20ace95](https://github.com/prantlf/v-pcre/commit/20ace95e5c800a16a8034ad58483ae212b3302ad))
+
 ## [0.2.3](https://github.com/prantlf/v-pcre/compare/v0.2.2...v0.2.3) (2023-12-11)
 
 ### Bug Fixes
