@@ -152,7 +152,11 @@ PCRE_EXP_DATA_DEFN only if they are not already set. */
 #      define PCRE_EXP_DEFN       __declspec(dllexport)
 #      define PCRE_EXP_DATA_DEFN  __declspec(dllexport)
 #    else
-#      define PCRE_EXP_DECL       extern
+#      ifdef __cplusplus
+#        define PCRE_EXP_DECL       extern "C"
+#      else
+#        define PCRE_EXP_DECL       extern
+#      endif
 #      define PCRE_EXP_DEFN
 #      define PCRE_EXP_DATA_DEFN
 #    endif

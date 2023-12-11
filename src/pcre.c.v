@@ -1,5 +1,6 @@
 module pcre
 
+#flag -D PCRE_STATIC
 #flag -I @VROOT/libpcre
 #flag @VROOT/libpcre/pcre_byte_order.c
 #flag @VROOT/libpcre/pcre_chartables.c
