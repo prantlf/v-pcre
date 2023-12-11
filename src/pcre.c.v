@@ -24,7 +24,7 @@ module pcre
 // #include "config.h"
 // #include "pcre_internal.h"
 
-[typedef]
+@[typedef]
 struct C.pcre {
 	magic_number      u32
 	size              u32
@@ -48,7 +48,7 @@ struct C.pcre {
 	nullpad           voidptr
 }
 
-[typedef]
+@[typedef]
 struct C.pcre_extra {
 	flags                 u32
 	study_data            voidptr

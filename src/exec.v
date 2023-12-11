@@ -2,31 +2,29 @@ module pcre
 
 import prantlf.strutil { check_bounds_strict }
 
-pub const (
-	error_null           = -2
-	error_badoption      = -3
-	error_badmagic       = -4
-	error_unknown_opcode = -5
-	error_nomemory       = -6
-	error_nosubstring    = -7
-	error_matchlimit     = -8
-	error_badutf8        = -10
-	error_badutf8_offset = -11
-	error_partial        = -12
-	error_badpartial     = -13
-	error_internal       = -14
-	error_badcount       = -15
-	error_recursionlimit = -21
-	error_badnewline     = -23
-	error_badoffset      = -24
-	error_shortutf8      = -25
-	error_recurseloop    = -26
-	error_badmode        = -28
-	error_badendianness  = -29
-	error_badlength      = -32
-)
+pub const error_null = -2
+pub const error_badoption = -3
+pub const error_badmagic = -4
+pub const error_unknown_opcode = -5
+pub const error_nomemory = -6
+pub const error_nosubstring = -7
+pub const error_matchlimit = -8
+pub const error_badutf8 = -10
+pub const error_badutf8_offset = -11
+pub const error_partial = -12
+pub const error_badpartial = -13
+pub const error_internal = -14
+pub const error_badcount = -15
+pub const error_recursionlimit = -21
+pub const error_badnewline = -23
+pub const error_badoffset = -24
+pub const error_shortutf8 = -25
+pub const error_recurseloop = -26
+pub const error_badmode = -28
+pub const error_badendianness = -29
+pub const error_badlength = -32
 
-[inline]
+@[inline]
 pub fn (r &RegEx) exec(subject string, options int) !Match {
 	return unsafe { r.exec_within_nochk(subject, 0, subject.len, options)! }
 }
@@ -36,7 +34,7 @@ pub fn (r &RegEx) exec_within(subject string, start int, end int, options int) !
 	return unsafe { r.exec_within_nochk(subject, start, stop, options)! }
 }
 
-[unsafe]
+@[unsafe]
 pub fn (r &RegEx) exec_within_nochk(subject string, start int, end int, options int) !Match {
 	offsetcount := (r.captures + 1) * 3
 	offsets := []int{len: offsetcount}
