@@ -1,5 +1,11 @@
 # Changes
 
+## [0.2.3](https://github.com/prantlf/v-pcre/compare/v0.2.2...v0.2.3) (2023-12-11)
+
+### Bug Fixes
+
+* Adapt for V langage changes ([51f8985](https://github.com/prantlf/v-pcre/commit/51f8985e921f2d7cb8914010452a6a35d62addc5))
+
 ## [0.2.2](https://github.com/prantlf/v-pcre/compare/v0.2.1...v0.2.2) (2023-09-17)
 
 ### Bug Fixes
