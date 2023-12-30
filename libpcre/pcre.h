@@ -728,6 +728,10 @@ PCRE_EXP_DECL void pcre32_jit_free_unused_memory(void);
 
 PCRE_EXP_DECL void pcre_free_re(pcre *);
 
+PCRE_EXP_DECL int  pcre_ctype(const char ch);
+PCRE_EXP_DECL int  pcre_gentype(pcre_uint32 ch);
+PCRE_EXP_DECL int  pcre_chartype(pcre_uint32 ch);
+
 #ifdef __cplusplus
 }  /* extern "C" */
 #endif

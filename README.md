@@ -227,7 +227,7 @@ See also the [original documentation for pcre_exec] and the description of the [
 
 The API consists of two parts - basic compilation and execution of a regular expression, corresponding with the [PCRE] C API described above and convenience functions for typical string checking, searching, splitting and replacing described below.
 
-### Searching
+### Search
 
 ```v
 (r &RegEx) matches(s string, opt int) !bool
@@ -294,6 +294,102 @@ Split the input string by the regular expression and return all parts, both rema
 ```v
 (r &RegEx) chop(s string, opt int) ![]string
 (r &RegEx) chop_first(s string, opt int) ![]string
+```
+
+### Classify
+
+Classify ASCII characters:
+
+```v
+char_space  = 0x01
+char_letter = 0x02
+char_digit  = 0x04
+char_xdigit = 0x08
+char_word   = 0x10
+char_meta   = 0x80
+
+pcre_chartype(ch u8) int
+```
+
+Additional character-classifying functions:
+
+```v
+pcre_isalnum(ch u8) bool
+pcre_isalpha(ch u8) bool
+pcre_isdigit(ch u8) bool
+pcre_isxdigit(ch u8) bool
+pcre_isword(ch u8) bool
+pcre_isspace(ch u8) bool
+```
+
+Classify Unicode characters in the general way:
+
+```v
+enum UnicodeGeneral {
+  other
+  letter
+  mark
+  number
+  punctuation
+  symbol
+  separator
+}
+
+pcre_unicode_gentype(r rune) UnicodeGeneral
+```
+
+Classify Unicode characters in a particular way:
+
+```v
+enum UnicodeParticular {
+  control
+  format
+  unassigned
+  private_use
+  surrogate
+  lowercase_letter
+  modifier_letter
+  other_letter
+  titlecase_letter
+  uppercase_letter
+  spacing_mark
+  enclosing_mark
+  nonspacing_mark
+  decimal_number
+  letter_number
+  other_number
+  connector_punctuation
+  dash_punctuation
+  close_punctuation
+  final_punctuation
+  initial_punctuation
+  other_punctuation
+  open_punctuation
+  currency_symbol
+  modifier_symbol
+  mathematical_symbol
+  other_symbol
+  line_separator
+  paragraph_separator
+  space_separator
+}
+
+pcre_unicode_partype(r rune) UnicodeParticular
+```
+
+Additional Unicode-capable character-classifying functions:
+
+```v
+pcre_unicode_isalnum(r rune) bool
+pcre_unicode_isalpha(r rune) bool
+pcre_unicode_islower(r rune) bool
+pcre_unicode_isupper(r rune) bool
+pcre_unicode_isdigit(r rune) bool
+pcre_unicode_iscntrl(r rune) bool
+pcre_unicode_isword(r rune) bool
+pcre_unicode_isspace(r rune) bool
+pcre_unicode_isblank(r rune) bool
+pcre_unicode_ispunct(r rune) bool
 ```
 
 ## Contributing

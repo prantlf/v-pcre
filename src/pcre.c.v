@@ -4,6 +4,7 @@ module pcre
 #flag -I @VROOT/libpcre
 #flag @VROOT/libpcre/pcre_byte_order.c
 #flag @VROOT/libpcre/pcre_chartables.c
+#flag @VROOT/libpcre/pcre_char_class.c
 #flag @VROOT/libpcre/pcre_compile.c
 #flag @VROOT/libpcre/pcre_config.c
 #flag @VROOT/libpcre/pcre_exec.c
@@ -69,3 +70,7 @@ fn C.pcre_exec(re &C.pcre, extra_data &C.pcre_extra, subject &u8, length int, st
 
 fn C.pcre_free_re(re &C.pcre)
 fn C.pcre_free_study(extra &C.pcre_extra)
+
+fn C.pcre_ctype(ch u8) int
+fn C.pcre_gentype(ch u32) int
+fn C.pcre_chartype(ch u32) int

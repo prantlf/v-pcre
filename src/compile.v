@@ -210,6 +210,7 @@ pub fn (r &RegEx) group_index_by_name(name string) int {
 	return -1
 }
 
+@[inline]
 pub fn (r &RegEx) group_name_by_index(idx int) string {
 	data := &r.name_data[idx - 1]
 	return unsafe { tos(r.name_buf.str + data.name_start, data.name_end - data.name_start) }
