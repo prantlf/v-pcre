@@ -1,5 +1,11 @@
 # Changes
 
+## [0.3.0](https://github.com/prantlf/v-pcre/compare/v0.2.4...v0.3.0) (2024-01-01)
+
+### Features
+
+* Export character-classifying functions ([a957350](https://github.com/prantlf/v-pcre/commit/a9573504959d02932cebcd2011f171665e358382))
+
 ## [0.2.4](https://github.com/prantlf/v-pcre/compare/v0.2.3...v0.2.4) (2023-12-11)
 
 ### Bug Fixes
