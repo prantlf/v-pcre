@@ -31,7 +31,7 @@ fn test_exec_match() {
 	}
 	s := 'a'
 	m := re.exec(s, 0)!
-	start, end := m.group_bounds(0)
+	start, end := m.group_bounds(0)?
 	assert start == 0
 	assert end == 1
 	assert m.group_text(s, 0)? == 'a'
@@ -44,11 +44,11 @@ fn test_exec_group() {
 	}
 	s := 'abc'
 	m := re.exec(s, 0)!
-	mut start, mut end := m.group_bounds(0)
+	mut start, mut end := m.group_bounds(0)?
 	assert start == 0
 	assert end == 2
 	assert m.group_text(s, 0)? == 'ab'
-	start, end = m.group_bounds(1)
+	start, end = m.group_bounds(1)?
 	assert start == 1
 	assert end == 2
 	assert m.group_text(s, 1)? == 'b'
@@ -61,15 +61,15 @@ fn test_exec_two_groups() {
 	}
 	s := 'abcd'
 	m := re.exec(s, 0)!
-	mut start, mut end := m.group_bounds(0)
+	mut start, mut end := m.group_bounds(0)?
 	assert start == 0
 	assert end == 4
 	assert m.group_text(s, 0)? == 'abcd'
-	start, end = m.group_bounds(1)
+	start, end = m.group_bounds(1)?
 	assert start == 1
 	assert end == 2
 	assert m.group_text(s, 1)? == 'b'
-	start, end = m.group_bounds(2)
+	start, end = m.group_bounds(2)?
 	assert start == 3
 	assert end == 4
 	assert m.group_text(s, 2)? == 'd'
@@ -82,11 +82,11 @@ fn test_exec_named_group() {
 	}
 	s := 'abc'
 	m := re.exec(s, 0)!
-	mut start, mut end := m.group_bounds(0)
+	mut start, mut end := m.group_bounds(0)?
 	assert start == 0
 	assert end == 2
 	assert m.group_text(s, 0)? == 'ab'
-	start, end = m.group_bounds(1)
+	start, end = m.group_bounds(1)?
 	assert start == 1
 	assert end == 2
 	assert m.group_text(s, 1)? == 'b'
@@ -99,15 +99,15 @@ fn test_exec_two_named_groups() {
 	}
 	s := 'abcd'
 	m := re.exec(s, 0)!
-	mut start, mut end := m.group_bounds(0)
+	mut start, mut end := m.group_bounds(0)?
 	assert start == 0
 	assert end == 4
 	assert m.group_text(s, 0)? == 'abcd'
-	start, end = m.group_bounds(1)
+	start, end = m.group_bounds(1)?
 	assert start == 1
 	assert end == 2
 	assert m.group_text(s, 1)? == 'b'
-	start, end = m.group_bounds(2)
+	start, end = m.group_bounds(2)?
 	assert start == 3
 	assert end == 4
 	assert m.group_text(s, 2)? == 'd'
