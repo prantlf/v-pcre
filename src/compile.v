@@ -105,8 +105,8 @@ pub fn compile(source string, options int) !&RegEx {
 	if isnil(re) {
 		msg := unsafe { err.vstring() }
 		return CompileError{
-			msg: msg
-			code: code
+			msg:    msg
+			code:   code
 			offset: offset
 		}
 	}
@@ -132,7 +132,7 @@ pub fn compile(source string, options int) !&RegEx {
 		C.pcre_free_re(re)
 		msg := 'getting the count of captures failed'
 		return CompileError{
-			msg: msg
+			msg:  msg
 			code: code
 		}
 	}
@@ -144,7 +144,7 @@ pub fn compile(source string, options int) !&RegEx {
 		C.pcre_free_re(re)
 		msg := 'getting the count of named captures failed'
 		return CompileError{
-			msg: msg
+			msg:  msg
 			code: code
 		}
 	}
@@ -159,7 +159,7 @@ pub fn compile(source string, options int) !&RegEx {
 			C.pcre_free_re(re)
 			msg := 'getting the table of named captures failed'
 			return CompileError{
-				msg: msg
+				msg:  msg
 				code: code
 			}
 		}
@@ -171,7 +171,7 @@ pub fn compile(source string, options int) !&RegEx {
 			C.pcre_free_re(re)
 			msg := 'getting size of an entry in the table of named captures failed'
 			return CompileError{
-				msg: msg
+				msg:  msg
 				code: code
 			}
 		}

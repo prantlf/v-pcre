@@ -57,22 +57,22 @@ pub fn pcre_chartype(ch u8) int {
 
 @[inline]
 pub fn pcre_isalnum(ch u8) bool {
-	return C.pcre_ctype(ch) & (pcre.char_letter | pcre.char_digit) != 0
+	return C.pcre_ctype(ch) & (char_letter | char_digit) != 0
 }
 
 @[inline]
 pub fn pcre_isalpha(ch u8) bool {
-	return C.pcre_ctype(ch) & pcre.char_letter != 0
+	return C.pcre_ctype(ch) & char_letter != 0
 }
 
 @[inline]
 pub fn pcre_isdigit(ch u8) bool {
-	return C.pcre_ctype(ch) & pcre.char_digit != 0
+	return C.pcre_ctype(ch) & char_digit != 0
 }
 
 @[inline]
 pub fn pcre_isxdigit(ch u8) bool {
-	return C.pcre_ctype(ch) & pcre.char_xdigit != 0
+	return C.pcre_ctype(ch) & char_xdigit != 0
 }
 
 @[inline]
@@ -82,7 +82,7 @@ pub fn pcre_isword(ch u8) bool {
 
 @[inline]
 pub fn pcre_isspace(ch u8) bool {
-	return C.pcre_ctype(ch) & pcre.char_space != 0
+	return C.pcre_ctype(ch) & char_space != 0
 }
 
 @[inline]
