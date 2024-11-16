@@ -1,5 +1,11 @@
 # Changes
 
+## [0.3.1](https://github.com/prantlf/v-pcre/compare/v0.3.0...v0.3.1) (2024-11-16)
+
+### Bug Fixes
+
+* Fix sources for the new V compiler ([bedf536](https://github.com/prantlf/v-pcre/commit/bedf5369c2a1d8db141288218eddce983da356fc))
+
 ## [0.3.0](https://github.com/prantlf/v-pcre/compare/v0.2.4...v0.3.0) (2024-01-01)
 
 ### Features
