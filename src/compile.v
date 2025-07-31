@@ -99,7 +99,7 @@ pub fn pcre_compile(source string, options int) !&RegEx {
 
 pub fn compile(source string, options int) !&RegEx {
 	mut code := 0
-	mut err := &u8(0)
+	mut err := unsafe { &u8(0) }
 	mut offset := 0
 	re := C.pcre_compile2(source.str, options, &code, &err, &offset, 0)
 	if isnil(re) {
@@ -111,7 +111,7 @@ pub fn compile(source string, options int) !&RegEx {
 		}
 	}
 
-	err = &char(0)
+	err = unsafe { &char(0) }
 	extra := C.pcre_study(re, options, &err)
 	if isnil(extra) {
 		C.pcre_free_re(re)
@@ -152,7 +152,7 @@ pub fn compile(source string, options int) !&RegEx {
 	mut name_data := []Name{cap: name_len}
 	mut name_buf := ''
 	if name_len > 0 {
-		mut name_table := &u8(0)
+		mut name_table := unsafe { &u8(0) }
 		code = C.pcre_fullinfo(re, extra, C.PCRE_INFO_NAMETABLE, &name_table)
 		if code != 0 {
 			C.pcre_free_study(extra)
